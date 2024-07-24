@@ -185,11 +185,11 @@
                             aria-labelledby="drop1">
                             <div class="profile-dropdown position-relative" data-simplebar>
                                 <div class="py-3 px-7 pb-0">
-                                    <h5 class="mb-0 fs-5 fw-semibold">User Profile</h5>
+                                    <h5 class="mb-0 fs-5 fw-semibold">{{ trans('users.profile') }}</h5>
                                 </div>
                                 <div class="d-flex align-items-center py-9 mx-7 border-bottom">
-                                    <img src="{{ asset('dist/images/profile/user-1.jpg') }}" class="rounded-circle"
-                                        width="80" height="80" />
+                                    <img src="{{ auth()->user()->avatar ?? asset('dist/images/profile/user-1.jpg') }}"
+                                        class="rounded-circle" width="80" height="80" />
                                     <div class="ms-3">
                                         <h5 class="mb-1 fs-3">{{ auth()->user()->name }}</h5>
                                         {{-- <span class="mb-1 d-block text-dark">job title</span> --}}
