@@ -29,6 +29,16 @@ class TaskForm extends Form
             'notes' => 'bail|nullable|string|min:10',
         ];
     }
+    
+    public function storeRules()
+    {
+        return [
+            'task_name' => 'bail|required|min:10',
+            'start_date' => 'bail|required|date',
+            'end_date' => 'bail|required|date|after_or_equal:start_date',
+            'notes' => 'bail|nullable|string|min:10',
+        ];
+    }
 
     public function setTask(Task $task)
     {
@@ -50,7 +60,7 @@ class TaskForm extends Form
 
     public function createTask()
     {
-        $this->validate();
+        $this->validate($this->storeRules());
         return Task::create($this->only(['user_id', 'task_name', 'start_date', 'end_date', 'notes']));
     }
 }

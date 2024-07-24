@@ -32,6 +32,7 @@ class CreateTask extends Component
             type: $isInserted ? 'success' : 'error',
             message: $isInserted ? trans('tasks.inserted') : trans('tasks.insert failed')
         )->to(Alert::class);
+        $this->form->reset();
     }
 
     public function render()
