@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth:web');
     }
 
     /**
@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        return redirect()->to(route('tasks.index'));
         return view('home');
     }
 }

@@ -1,8 +1,15 @@
 // Fonts
-@import url('https://fonts.bunny.net/css?family=Nunito');
+@import url("https://fonts.bunny.net/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
+
+.form-control {
+    &.is-valid-left,
+    &.is-invalid-left {
+        background-position: left calc(0.375em + 0.1875rem) center !important;
+    }
+}
