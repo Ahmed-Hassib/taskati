@@ -14,7 +14,7 @@ return [
     'list' => 'task list',
     'add new' => 'add new task',
     'task name' => 'task name',
-    'start at' => 'end date',
+    'start at' => 'start date',
     'end at' => 'end date',
     'status' => 'status',
     'created at' => 'date added',
